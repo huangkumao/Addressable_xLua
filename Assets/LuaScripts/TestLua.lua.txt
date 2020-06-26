@@ -1,0 +1,13 @@
+
+local Ins = nil
+
+--把GameObject对象引用传给Lua
+function SetInstance(pIns)
+	Ins = pIns
+end
+
+function LoadRes()
+	print("LoadRes")
+	--回调
+	Ins:CallFromLua("Assets/UI/Prefabs/Cube_1.prefab")
+end
